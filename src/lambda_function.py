@@ -7,7 +7,7 @@ openai.api_key = os.environ['OPENAI_API_KEY']
 
 def lambda_handler(event, context):
     # Retrieve the input prompt from the request
-    prompt = event['input']
+    prompt = event['body']
     
     # Call the OpenAI API
     response = openai.Completion.create(
