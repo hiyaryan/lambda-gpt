@@ -27,7 +27,7 @@ Looking at these numbers, gpt-3.5-turbo and AWS Lambda are cheaper than a custom
 If you've read through all of that and find yourself with a similar story then this repository will provide you with the template and references required to include any OpenAI LLM to your website using AWS Lambda functions. It's assumed you already have a website and know how and where you're going to make these API calls. This, How To, will help you lay down the infrastructure for your serverless API.
 
 1. Create a new Lambda Function with the name of your endpoint.
-2. Copy all of the code from the [lambda_function.py](https://github.com/hiyaryan/lambda-gpt/blob/main/lambda_function.py) file in this repository and paste it into the code block of your AWS Lambda Function you just created.
+2. Copy all of the code from the [lambda_function.py](https://github.com/hiyaryan/lambda-gpt/blob/main/src/lambda_function.py) file in this repository and paste it into the code block of your AWS Lambda Function you just created.
 
     You should update this piece of code to your liking. You can play around with the settings and which LLM you'd like to use at OpenAI's [playground](https://platform.openai.com/playground) before committing (of course this can be changed anytime you like).
 
@@ -62,7 +62,7 @@ If you've read through all of that and find yourself with a similar story then t
 
     AWS Lambda Layers Tutorial: [Add External Python Libraries to AWS Lambda using Lambda Layers](https://www.linkedin.com/pulse/add-external-python-libraries-aws-lambda-using-layers-gabe-olokun%3FtrackingId=uEcLp89cRZGqILgGevDEyw%253D%253D/?trackingId=uEcLp89cRZGqILgGevDEyw%3D%3D)
 
-    4.1.2. Alternatively (I recommend following 4.1 as I have not tested this but it should work in theory), you could upload the [package.zip](https://github.com/hiyaryan/lambda-gpt/blob/main/package.zip) file that I created which is essentially what you'll be creating inside an AWS Cloudshell instance from the tutorial above (some steps may vary)
+    4.1.2. Alternatively (I recommend following 4.1 as I have not tested this but it should work in theory), you could upload the [package.zip](https://github.com/hiyaryan/lambda-gpt/blob/main/src/package.zip) file that I created which is essentially what you'll be creating inside an AWS Cloudshell instance from the tutorial above (some steps may vary)
 
     `package.zip` contains `lambda_function.py`, the `openai` module and all of the modules that were installed to support it.
 
